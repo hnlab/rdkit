@@ -241,6 +241,7 @@ cursor.execute("DROP INDEX IF EXISTS core_smi_idx")
 cursor.execute("CREATE INDEX core_smi_ni_idx ON core_table (core_smi_ni)")
 cursor.execute("DROP INDEX IF EXISTS smiles_idx")
 cursor.execute("CREATE INDEX smiles_idx ON cmpd_smisp (smiles)")
+con.commit()
 
 #add smarts searching capability if required
 if (options.sma):
